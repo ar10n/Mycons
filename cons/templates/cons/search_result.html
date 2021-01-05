@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contracts Search Result</title>
+    <link rel="stylesheet" href="{% static 'cons/style.css' %}">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {% for item in object_list %}
+            <li>
+                {{ item.notice_number }} -> {{ item.company_name }} -> {{ item.full_price }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
